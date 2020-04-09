@@ -2,6 +2,7 @@
 
 __author__ = 'nijiaxuan'
 
+from AutoException import AutoException
 
 class TestClass(object):
 
@@ -12,10 +13,3 @@ class TestClass(object):
         return str(self.value)
 
     __repr__ = __str__
-
-
-	
-	
-	
-	
-	
