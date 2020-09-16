@@ -13,3 +13,4 @@ class TestClass(object):
         return str(self.value)
 
     __repr__ = __str__
+    
