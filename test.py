@@ -2,12 +2,15 @@
 # coding=utf-8
 __author__ = 'nijiaxuan'
 
-from AutoException import AutoException
+from ExceptionPackage import AutoException
 
 class TestClass(object):
 
-    def __init__(self,val=1):
+    def __init__(self,val=1.1):
         self.value=val
+
+    def __test(self):
+        pass
 
     def __str__(self):
         return str(self.value)
