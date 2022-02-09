@@ -1,2 +1,0 @@
-# nijiaxuan
-my test
