@@ -17,7 +17,7 @@ class Case(unittest.TestCase):
     def tearDown(self):
         # 退出浏览器
         self.driver.quit()
-        logging.info("方法执行前执行（后置）")
+        logging.info("方法执行后执行（后置）")
 
     @classmethod
     def setUpClass(cls):
@@ -25,7 +25,7 @@ class Case(unittest.TestCase):
 
     @classmethod
     def tearDownClass(cls):
-        logging.info("类执行前执行（后置）")
+        logging.info("类执行后执行（后置）")
 
 
 
