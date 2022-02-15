@@ -3,13 +3,23 @@
 """
 BasePage对象，主要用于提供各类常规操作，便于页面对象调用
 """
+
+# 创建浏览器对象
 from selenium import webdriver
+
+
+def browser(browserName):
+    try:
+        driver = getattr(webdriver, browserName)()
+    except Exception, e:
+        driver = webdriver.Chrome()
+    return driver
 
 
 class BasePage(object):
     # 定义构造函数
-    def __init__(self, driver):
-        self.driver = driver
+    def __init__(self, browserName):
+        self.driver = browser(browserName)
 
     # 访问url
     def visit(self, url):
